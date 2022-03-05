@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+{{ .Content }}
+
+<ul>
+   {{ range (.Paginate ( where .Site.RegularPages "Section" "writing" ).ByDate.Reverse).Pages }}
+      {{ if ne .Kind "section" }}
+  <li>
+    <time>{{ .Date.Format "2006/01/02" }}</time>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,46 @@
+baseurl: ''
+languageCode: en-us
+title: Minimalist
+googleAnalytics: ""
+disqusShortname: ""
+preserveTaxonomyNames: true
+footnotereturnlinkcontents: ↩
+disableHugoGeneratorInject: true
+pluralizeListTitles: false
+pygmentsCodeFences: false
+pygmentsUseClasses: false
+minify: true
+paginate: 9999
+disableKinds:
+  - section
+  - categories
+  - tags
+
+permalinks:
+  writing: /:year/:month/:day/:slug/
+
+params:
+  description: "Minimalist theme for Hugo"
+
+frontmatter:
+  author: Example
+  github: 'https://github.com/example'
+  facebook: 'https://facebook.com/example'
+  og_image: 
+  sitename: Minimalist
+  twitter: '@twitter'
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+outputFormats:
+  RSS:
+    mediatype: application/rss
+    baseName: atom
+  JSON:
+    mediatype: application/json
+    baseName: feed
+
+
