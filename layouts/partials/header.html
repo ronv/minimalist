@@ -89,12 +89,10 @@
   {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     <header>
-
 {{ if .IsHome }}
-<h1><a href="/">{{ .Site.Title }}</a></h1>
-{{ else }}
+<h1><a href="/">{{ .Site.Title }}</a></h1>{{ else }}
 <h1><a href="/">{{ .Site.Title }}</a></h1> / <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
 {{ end }}
-</header>
+    </header>
 
     <article>

@@ -9,7 +9,7 @@ disableHugoGeneratorInject: true
 pluralizeListTitles: false
 pygmentsCodeFences: false
 pygmentsUseClasses: false
-minify: true
+minify: false
 paginate: 9999
 disableKinds:
   - section
